@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Register</title>
+	<style type="text/css">
+			*{
+			font-family: monospace;
+		}
+		#formValues{
+
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			justify-items: center;
+			align-content: center;
+			align-items: center;
+			text-align: left;
+			font-family: sans-serif;
+			font-size: 1em;
+			margin-right: auto;
+			margin-left: auto;
+			/*margin-top: 2em;*/
+			font-weight: bolder;
+		}
+		div{
+			padding: 1em;
+			margin: 0.3m;
+		}
+		#lables,#values{
+			display: flex;
+			flex-direction: column;
+		}
+
+		.fieldsets{
+
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 1em;
+			border-style: outset;
+			background-color:#CCC;
+  			max-width:1000px;
+  			padding:16px;	
+		}
+		.button{
+			text-align:center;
+			position: absolute;
+			left: 46%;padding: 1em;
+			font-size: 1em;
+			font-weight: bolder;
+			background-color: black;
+			color: white;
+			border-radius: 0em;
+			cursor: pointer;
+			margin: 2em;
+			width: 7em;
+		}
+		.button:hover{
+			color: black;
+			background-color: white;
+				}
+		.legends{
+			/*border-radius: 1em;*/
+			/*text-align: center;*/
+			width: 9em;
+			border-style: solid;
+			font-weight: bolder;
+			font-size: 1.5em;
+			color: white;
+			padding: 0.5em;
+			background-color: black;
+			margin-bottom:0px;
+  			margin-left:16px;
+		}
+			
+	</style>
+</head>
+<body>
+	<!-- <div style="text-align: center;font-size: 3.5em;text-decoration: underline;font-weight: bolder;">Fill out the form</div> -->
+	<h1 style="color:red;text-align: center;margin-top: 5em;"> <%= locals.message %></h1>
+
+	<form action="/register" method="POST">
+		<fieldset class="fieldsets">
+
+		<legend class="legends">Create new account</legend>
+		<div id="formValues">
+			<div id="lables">
+				<!-- <div>Name 			:</div> -->
+				<div>Email 			:</div>
+				<div>Password 		:</div>
+				<div>Confirm password :</div>
+
+
+			</div>
+			
+			<div id="values">
+			
+				<!-- <div>
+				<input type="text" name="name" placeholder="type here....">
+				</div>
+				 -->
+				<div>
+				<input type="email" name="email" placeholder="type here...." >
+				</div>
+				
+				<div>
+				<input type="password" name="password">
+				</div>
+				
+				<div>
+				<input type="password" name="Confirm_password">
+				</div>
+			</div>
+			</div>
+		<input type="submit" name="submit" value="Create!" class="button">
+	</fieldset>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>View my application</title>
+	<style type="text/css">
+		*{
+			font-family: monospace;
+		}
+		#box{
+
+			display: flex;
+			flex-direction: row;
+			/*justify-content: center;
+			justify-items: center;
+			align-content: center;
+			align-items: center;*/
+			text-align: left;
+			font-family: sans-serif;
+			font-size: 1em;
+			/*margin-right: auto;
+			margin-left: auto;*/
+			/*margin-top: 2em;*/
+			font-weight: bolder;
+		}
+		div{
+			padding: 1em;
+			margin: 0.3m;
+		}
+		#lables,#values{
+			display: flex;
+			flex-direction: column;
+		}
+		a{
+			position: absolute;
+			top: 64%;
+			align-content: center;
+			text-align: center;
+			left: 48.5%;
+			font-size: 1.2em;
+			font-weight: bolder;
+		}
+		.profile{
+			text-align: left;
+			font-weight: bolder;
+			font-size: 4em;
+			padding: 1em;
+		}
+	</style>
+</head>
+<body>
+	<div class="profile">Your profile</div>
+	<hr>
+	<!-- <img src="" alt="profile" height="128em" width="128em" style="padding: 1em;margin-left: 1.5em;border-style: dashed;" > -->
+
+	<!-- <form action="/save" method="post" enctype="multipart/form-data" style="margin-top: 2em;">
+		<input type="file" name="file">
+		<input type="submit" name="submit" value="Update profile">
+	</form> -->
+		
+	<div id="box">
+		<div id="lables">
+			<div>Name:</div>
+			<div>Email:</div>	
+			<div>Age</div>	
+			<div>Indian citizen  :</div>	
+			<div>Mobile number</div>	
+			<div>Applied Position :</div>	
+			<div>Desired pay:</div>	
+			<div>College name:</div>	
+			<div>CGPA:</div>	
+			<div>Password year:</div>	
+			<div>Degree :</div>	
+			<div>Branch</div>	
+			<div>Language known</div>	
+			<div>Extra curricular activites:</div>	
+			<div>Programming Languages Known:</div>	
+			<div>Favourite project:</div>
+			<div>Notable Achievement:</div>	
+		</div>
+		<div id="values">
+			<div><%= locals.name || "-----" %></div>
+			<div><%= locals.email || "-----" %></div>
+			<div><%= locals.age  || "-----" %></div>
+			<div><%= locals.indCit   || "-----" %></div>
+			<div><%= locals.number   || "-----" %></div>
+			<div><%= locals.position   || "-----" %></div>
+			<div><%= locals.pay  || "-----" %></div>
+			<div><%= locals.college  || "-----" %></div>
+			<div><%= locals.cgpa  || "-----" %></div>
+			<div><%= locals.passoutyear  || "-----" %></div>
+			<div><%= locals.degree  || "-----" %></div>
+			<div><%= locals.branch  || "-----" %></div>
+			<div><%= locals.lan  || "-----" %></div>
+			<div><%= locals.extAct  || "-----" %></div>
+			<div><%= locals.pro_lan  || "-----" %></div>
+			<div><%= locals.project  || "-----" %></div>
+			<div><%= locals.achievement  || "-----" %></div>
+		</div>
+	</div>
+</body>
+</html>

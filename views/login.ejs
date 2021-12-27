@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login</title>
+	<style type="text/css">
+			*{
+			font-family: monospace;
+		}
+		#formValues{
+
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			justify-items: center;
+			align-content: center;
+			align-items: center;
+			text-align: left;
+			font-family: sans-serif;
+			font-size: 1.4em;
+			margin-right: auto;
+			margin-left: auto;
+			/*margin-top: 2em;*/
+			font-weight: bolder;
+		}
+		div{
+			padding: 1em;
+			margin: 0.3m;
+		}
+		#lables,#values{
+			display: flex;
+			flex-direction: column;
+		}
+		a{
+			position: absolute;
+			color: gray;
+			align-content: center;
+			text-align: center;
+			font-size: 1.7em;
+			left: 45%;
+			font-weight: bolder;
+		}
+		a:hover{
+			color: black;
+		}
+		.legends{
+			/*border-radius: 1em;*/
+			/*text-align: center;*/
+			width: 9em;
+			border-style: solid;
+			font-weight: bolder;
+			font-size: 1.5em;
+			color: white;
+			padding: 0.5em;
+			background-color: black;
+			margin-bottom:0px;
+  			margin-left:16px;
+		}
+		.fieldsets{
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 1em;
+			border-style: outset;
+			background-color:#CCC;
+  			max-width:1000px;
+  			padding:16px;	
+		}
+		.button{
+			text-align:center;
+			position: absolute;
+			left: 46%;padding: 1em;
+			font-size: 1em;
+			font-weight: bolder;
+			background-color: black;
+			color: white;
+			border-radius: 0em;
+			cursor: pointer;
+			margin: 2em;
+			width: 7em;
+		}
+		.button:hover{
+			color: black;
+			background-color: white;
+		}
+	</style>
+
+</head>
+<body>
+	<div style="text-align: center;font-size: 3.5em;text-decoration: underline;font-weight: bolder;"></div>
+	<div style="text-align: center;font-size: 1.5em;color: red;">
+		<% if(messages.error){messages.error}  %>
+		<h1 style="color:red;"> <%= locals.message %></h1>
+
+	</div>
+	<form action="/login" method="POST">
+		<fieldset class="fieldsets">
+			<legend class="legends">Login</legend>
+			<div id="formValues">
+				<div id="lables">
+					<div>Email 			:</div>
+					<div>Password 		:</div>
+				</div>
+				<div id="values">
+					<div>
+						<input type="email" name="email" placeholder="type here...." style="line-height: 2em;">
+					</div>
+
+					<div>
+						<input type="password" name="password" style="line-height: 2em;">
+					</div>
+				</div>
+				</div>
+
+			<input type="submit" name="submit" value="Login!" class="button">
+		</fieldset>
+		</form>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<a href="/register">Create account</a>
+
+</body>
+</html>
+
+
+<!-- 
+create table application(
+email varchar(255) primary key,
+name varchar(255),
+address varchar(255),
+phone int,
+indian_citizen int,
+position varchar(255),
+desired_pay varchar(255),
+college varchar(255),
+cpga varchar(255),
+passout_year int,
+degree varchar(255),
+branch varchar(255),
+tamil int,
+english int,
+extra_act varchar(255),
+c int,
+java int,
+python int,
+cplusplus int,
+csharp int,
+go int,
+js int,
+project varchar(25),
+achievement varchar(255),
+profile_image varchar(255),
+resume varchar(255),
+foreign key (email) references userData(useremail)
+);
+ -->
+		
+

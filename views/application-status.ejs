@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Application status</title>
+	<style type="text/css">
+		*{
+				text-align: center;
+		}
+		form{
+			padding: 1em;
+			font-size: 1.2em;
+		}
+		.button{
+			text-align:center;
+			/*position: absolute;*/
+			/*left: 30%;*/
+			/*margin-bottom: 1em;*/
+			padding: 1em;
+			font-size: 1em;
+			font-weight: bolder;
+			background-color: black;
+			color: white;
+			border-radius: 0em;
+			cursor: pointer;
+			/*margin: 2em;*/
+			width: 20em;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.button:hover{
+			color: black;
+			background-color: white;
+		}
+	</style>
+</head>
+<body>
+			<h1 style="color:green;"><%= locals.message %></h1>
+			<h1 style="color:red;"><%= locals.err_message %></h1>
+			<div style="margin-bottom: 10em;"></div>
+			<form action="/viewform" method="POST">
+				<input type="submit" name="view" value="View my application" class="button">
+			</form>
+			<form action="/delete_application" method="POST">
+				<input type="submit" name="deleteApplication" value="Delete my application" class="button">
+			</form>
+
+			<form action="/logout?_method=DELETE" method="POST">
+				<input type="submit" name="logout" value="Logout" class="button">
+	</form>
+
+<!-- ?_method=DELETE -->
+			
+
+</body>
+</html>
